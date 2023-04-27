@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8" />
+        <title>Trivial Poursuit</title>
+    </head>
+
+    <body>
+    <h1>Bonjour !</h1>
+    <p> <em>Veuillez sélectionner </em> <strong>un</strong> fichier <mark>.csv</mark> contenant les question réponses. </p>
+
+    	<!-- chargement de la library papa parse -->
+        <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.js" ></script> 
+        <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.min.js"></script>
+
+        <script type="text/javascript" src="load_csv.js">
+           
+        </script>
+
+
+
+        <form >
+            <input type="file" name="File Upload" id="txtFileUpload" accept=".csv" href= accueil.html/>      
+        
+        </form>
+
+        <script language="javascript">        
+            document.getElementById('txtFileUpload').addEventListener('change', upload, false);
+        </script>
+    
+
+    
+
+    <form action="accueil.html">
+
+
+    <input type="submit" value="Aller à l'accueil" />
+
+</form>
+
+
+    </body>
+</html>
+
+<!-- Ceci est un commentaire -->

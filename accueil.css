@@ -1,0 +1,34 @@
+body {/*
+color:black;
+background-color:white;
+background:url(images/fond.jpg) no-repeat center fixed; 
+background-size: cover;*/
+}
+
+.titre {
+background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+font-size: 2.9vw; /* taille de la police à 3% de la largeur de la fenetre */
+text-align:center;
+padding:2px 20px;
+border-radius: 4px;
+position: absolute;
+top: 5%; /* poussé de la moitié de hauteur du référent */ 
+left: 50%; /* poussé de la moitié de hauteur du référent */ 
+transform: translateX(-50%); /* tiré de la moitié de sa propre hauteur */
+transform: translateZ(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+.boutonIn {
+background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+font-size: 2.9vw;/* taille de la police à 3% de la largeur de la fenetre*/
+text-align:center;
+padding:2px 20px;
+border-radius: 10px;
+border:5px black ridge;
+cursor:pointer;
+position: absolute;
+top: 70%; /* poussé de la moitié de hauteur du référent */ 
+left: 50%; /* poussé de la moitié de hauteur du référent */ 
+transform: translateX(-50%); /* tiré de la moitié de sa propre hauteur */
+transform: translateZ(-50%); /* tiré de la moitié de sa propre hauteur */
+}
+a.boutonIn:hover {background-image: linear-gradient(to right, #26a0da  0%, #314755 51%, #26a0da  100%)} 

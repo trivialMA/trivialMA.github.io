@@ -1,0 +1,198 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.image-upload>input {
+  display: none;
+}
+
+.bouton
+{
+	width: 340px;
+	flex-grow: 1;
+	flex-basis: auto;
+	margin:10px;
+	height: 100px;
+  border-radius:3rem;
+  font-size:xx-large
+}
+
+.Titre-Question{
+font-size:normal !important;
+}
+
+
+.Bulle-Titre{
+background-color: #fff !important;
+color:#000;
+}
+
+.Bulle-Question-Géographie{
+background-color: #007bff !important;
+color:#fff;
+}
+
+.Bulle-Question-Histoire{
+background-color: #eae712 !important;
+color:#fff;
+}
+
+.Bulle-Question-Sports{
+background-color: #fa9504 !important;
+color:#fff;
+}
+
+.Bulle-Question-Littérature{
+background-color: #76542a !important;
+color:#fff;
+}
+
+.Bulle-Question-Divertissement{
+background-color: #ff31c4 !important;
+color:#fff;
+}
+
+.Bulle-Question-Autres{
+background-color: #6c757d !important;
+color:#fff;
+}
+
+.Bulle-Question-Sciences{
+background-color: #28a745 !important;
+color:#fff;
+}
+
+
+#Géographie {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#Géographie:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Autres {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+#Autres:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Sciences {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+#Sciences:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Histoire {
+  color: #fff;
+  background-color: #eae712;
+  border-color: #eae712;
+}
+
+#Histoire:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Divertissement {
+  color: #fff;
+  background-color: #ff31c4;
+  border-color: #ff31c4;
+}
+
+#Divertissement:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Sports {
+  color: #fff;
+  background-color: #fa9504;
+  border-color: #fa9504;
+}
+
+#Sports:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#Littérature {
+  color: #fff;
+  background-color: #76542a;
+  border-color: #76542a;
+}
+
+#Littérature:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+
+#bouton-rep {
+  color: #fff;
+  background-color: #222240;
+  border-color: #222240;
+}
+
+#bouton-rep:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+#bouton-newQ {
+  color: #fff;
+  background-color: #222240;
+  border-color: #222240;
+}
+
+#bouton-newQ:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+.bouton-accueil {
+  color: #fff;
+  background-color: #ffbde2;
+  border-color: #ffbde2;
+}
+
+.bouton-accueil:hover {
+  color: #fff;
+  background-color: #9a1014;
+  border-color: #9a1014;
+  font-weight: 600;
+}

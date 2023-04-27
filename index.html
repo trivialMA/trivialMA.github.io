@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <!-- Ajouts CSS -->
+    <link rel="stylesheet" href="bootstrap.css"/>
+
+    <!-- Titre page HTML -->
+    <title>Test Bootstrap</title>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="ChargerQuestions.js" ></script>
+    <script language="javascript">
+    /*var retrievedObject = JSON.parse(localStorage.getItem('retour'));
+    var seven_array = Object.values(retrievedObject)
+    var zbeul=r_q(seven_array);*/
+    </script>
+    <script language="javascript" src="GestionQuestions.js"></script>
+    <!-- chargement de la library papa parse -->
+    <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.js" ></script> 
+    <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.min.js"></script>
+        
+  </head>
+
+  <body style="background-image: url(images/mesAmours.jpg); padding:0; background-repeat: no-repeat; font-size: 250%; background-size: cover; background-position: 50% 25%;">
+
+    <!-- Logo Trivial -->
+    <header>
+        <div class="card-img-top" style="width: 15rem; height: 6rem">
+            <div>
+                <form>
+                    <label for="txtFileUpload">
+                        <img class="card-img-top" src="images/logo.png" alt="Card image cap"/>
+                    </label>
+                    <input style="visibility:hidden; "type="file" name="File Upload" id="txtFileUpload" accept=".csv"/>
+                    <script language="javascript">        
+                        document.getElementById('txtFileUpload').addEventListener('change', upload, false);
+                    </script>
+                </form>
+            </div>
+    </header>
+
+
+        
+
+    <!-- Titres -->
+    <div id="Bulle-Titre" style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
+        <h1 id="TitreThème" class="display-2 text-center">Choisissez un thème : </h1>
+    </div>
+    
+    <!-- Boutons -->
+    <div class="container text-center">
+        <button type="button" id="Géographie" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Géographie
+        </button>
+        <button type="button" id="Littérature" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Littérature
+        </button>
+        <button type="button" id="Divertissement" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Divertissement
+        </button>
+        <button type="button" id="Histoire" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Histoire
+        </button>
+        <button type="button" id="Sciences" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Sciences
+        </button>
+        <button type="button" id="Sports" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Sport
+        </button>
+        <button type="button" id="Autres" class="btn bouton"
+            onClick="selectionQuestion(id);">
+            Autre
+        </button>
+    </div>
+
+    
+        <h2 id="TitreQuestion" class="text-center"></h2>
+        <!-- Question et réponse -->
+    <section class="container text-center" style="border-radius:3rem; background-color: white">
+        <div class="container text-center">
+            <p id="question"></p>
+            <p style="font-weight: bolder" id="reponse"></p>
+        </div>
+    </section>
+
+        <section class="container text-center" style="border-radius:1rem; background-color: white">
+        <div class="container text-center">
+
+            <font size="+3"><p id="name"></p></font>
+        </div>
+    </section>
+        <!-- Options -->
+        <div class="container text-center">
+            <!-- Bouton afficher la réponse -->
+            <b id="bouton-rep" class="btn bouton" onClick="afficherReponse();" hidden=true> 
+            Afficher la réponse
+            </b>
+
+            <!-- Bouton Choisir une nouvelle question -->
+            <b id="bouton-newQ" class="btn bouton" onClick="choixThème();" hidden=true>
+            Choisir une nouvelle question
+            </b>
+        </div>
+    
+  </body>
+</html>
