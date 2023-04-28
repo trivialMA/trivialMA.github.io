@@ -6,6 +6,24 @@
 let resultats;
 let res;
 
+function upload_default(){
+    var file = "defaultQR.csv";
+    var reader = new FileReader();
+    reader.readAsText(file);
+
+    reader.onload = function(event) {
+        var csvData = event.target.result;
+        var result = Papa.parse(csvData, 
+            { header : true, complete: function(data) { resultats = data.data } } );
+        res = split_array(resultats)
+        console.log(res)
+    };
+
+    reader.onerror = function() {
+        alert('Unable to read ' + file.fileName);
+    };
+}
+
 function upload(evt) {
 
     //console.log(evt)
