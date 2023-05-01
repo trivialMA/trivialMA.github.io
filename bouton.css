@@ -18,6 +18,20 @@ background-size: cover;
 	padding: 10px 30px;
 }
 
+.bouton2{
+	padding: 2vw 3vw;
+	background: #fcff16;
+	color: black;
+	float:left;
+	margin:2px;
+	cursor:pointer;
+	width: 30%;
+}
+
+.bouton2:hover{
+	background: black;
+}
+
 #Histoire{
 	padding: 2vw 3vw;
 	background: #fcff16;

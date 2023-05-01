@@ -20,6 +20,19 @@ html, body {
   font-size:xx-large
 }
 
+.bouton2 {
+  color: #fff;
+  background-color: #222240;
+  border-color: #222240;
+}
+
+.bouton2:hover {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+  font-weight: bold;
+}
+
 .Titre-Question{
 font-size:normal !important;
 }
@@ -156,7 +169,6 @@ color:#fff;
   border-color: #fff;
   font-weight: bold;
 }
-
 
 #bouton-rep {
   color: #fff;

@@ -86,6 +86,24 @@ function upload(evt) {
                  
 };
 
+function importData() {
+    let input = document.createElement('input');
+    input.type = 'file';
+    input.onchange = _ => {
+        // you can use this method to get file and perform respective operations
+        let files = Array.from(input.files);
+        console.log(files);
+        var result = Papa.parse(files[0], {header : true, complete: reponse => {
+            results = reponse.data;
+            res = split_array(results);
+            Hide_Loading();
+            choixThème();
+            }
+        })
+    };
+  input.click();
+}
+
 function print (c){
     alert (c);
 };
@@ -254,15 +272,10 @@ function removeBackGroundColor(){
 
 function Hide_Loading(){
     document.getElementById('Loading_div').hidden = true;
-    document.getElementById('Loading_title').hidden = true;
     document.getElementById('Loading_btns').hidden = true;
-    document.getElementById('Manual_loading').hidden = true;
-    document.getElementById('Default_loading').hidden = true;
 
     document.getElementById('btns_div').hidden = false;
     document.getElementById('Bulle-Titre').hidden = false;
-    console.log(document.getElementById('btns_div').hidden)
-    console.log(document.getElementById('Bulle-Titre').hidden)
 }
 
 function choixThème(){
