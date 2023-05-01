@@ -52,44 +52,31 @@
             </div>
     </header>
 
-    <!-- Titres -->
-    <div id="Bulle-Titre" style="background-color: white; color:black; width:70%; margin:auto; margin-top:20%;border-radius:3rem; padding:6px">
-        <h1 id="TitreThème" class="display-5 text-center">Chargez les questions</h1>
-        <div class="container text-center">
+    <!-- Loading -->
+    <div id="Loading_div" style="background-color: white; color:black; width:70%; margin:auto; margin-top:20%;border-radius:3rem; padding:6px">
+        <h1 id="Loading_title" class="display-5 text-center">Chargez les questions :</h1>
+        <div id="Loading_btns" class="container text-center">
 
-            <button type="button" class="btn btn-primary">
-                Upload
+            <button id="Manual_loading" type="button" class="btn btn-primary">
+                Manuellement
                 <input type="file" name="File Upload" id="txtFileUpload2" accept=".csv"/>
                 <script language="javascript">
                     document.getElementById('txtFileUpload2').addEventListener('change', upload, false);
                 </script>
             </button>
-
-            <!-- 
-            <div class="file btn btn-lg btn-primary">
-                Upload
-                <input type="file" name="File Upload" id="txtFileUpload3" accept=".csv"/>
-                <script language="javascript">
-                    document.getElementById('txtFileUpload3').addEventListener('change', upload, false);
-                </script>
-            </div>
-            -->
             
-            <button type="button" class="btn btn-primary" onClick="upload_default();">
-                Upload
-            </button>
-
-            <button type="button" id="Géographie" class="btn bouton"
-                onClick="selectionQuestion(id);">
-                Géographie
+            <button id="Default_loading" type="button" class="btn btn-primary" onClick="upload_default();">
+                Automatiquement
             </button>
         
         </div>
     </div>
     
-    
-    <!-- Boutons -->
-    <!-- <div class="container text-center">
+    <!-- Playing -->
+    <div id="Bulle-Titre" style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
+        <h1 id="TitreThème" class="display-2 text-center">Choisissez un thème : </h1>
+    </div>
+    <div class="container text-center">
         <button type="button" id="Géographie" class="btn bouton"
             onClick="selectionQuestion(id);">
             Géographie
@@ -118,7 +105,7 @@
             onClick="selectionQuestion(id);">
             Autre
         </button>
-    </div>Boutons -->
+    </div>
 
         
         <h2 id="TitreQuestion" class="text-center"></h2>

@@ -31,6 +31,126 @@ var nb_geo=5
 var nb_autre=11
 var nb_fonds=3
 
+let resultats;
+let res;
+
+/*async function test_fetch2(){
+    fetch('DefaultQR.csv')
+    .then(response => response.text()) 
+    .then(csvString => { 
+        var result = Papa.parse(csvString, 
+        {header : true, complete: function(data) { resultats = data.data } } );
+        res = split_array(resultats)
+    });
+}
+
+async function test_fetch3(){
+    let results = []
+    const csvData = Papa.parse('DefaultQR.csv', 
+        { download: true, header : true, complete: reponse => { 
+            results = reponse.data
+            res = split_array(results)
+        } 
+    });
+}*/
+
+async function upload_default(){
+    let results = [];
+    const csvData = Papa.parse('DefaultQR.csv', 
+        { download: true, header : true, complete: reponse => { 
+            results = reponse.data;
+            res = split_array(results);
+            Hide_Loading();
+            choixThème();
+        } 
+    });
+}
+
+function upload(evt) {
+    var file = evt.target.files[0];
+    var reader = new FileReader();
+    reader.readAsText(file);
+
+    reader.onload = function(event) {
+        var csvData = event.target.result;
+        var result = Papa.parse(csvData, 
+            { header : true, complete: function(data) { resultats = data.data } } );
+        res = split_array(resultats)
+        Hide_Loading();
+        choixThème();
+    };
+
+    reader.onerror = function() {
+        alert('Unable to read ' + file.fileName);
+    };
+                 
+};
+
+function print (c){
+    alert (c);
+};
+
+function split_array(d){
+    console.log(d)
+    shuffle(d)
+    var q_histoire = [];
+    var q_geo = [];
+    var q_art = [];
+    var q_divert = [];
+    var q_sciences = [];
+    var q_sports = [];
+    var q_autre = [];
+    for (var i = 0; i < d.length; i++) {
+        //console.log(d[i]["Catégorie"])
+
+        if(d[i].Catégorie.substring(0,8)=="Histoire"){
+             q_histoire.push(d[i]);
+        } 
+         //console.log(d[i]["Catégorie"])
+        else if (d[i].Catégorie.substring(0,3)=="Géo"){
+             q_geo.push(d[i]);
+        } 
+
+        else if (d[i].Catégorie.substring(0,3)=="Art") {
+            q_art.push(d[i]);
+        }
+
+        else if (d[i].Catégorie.substring(0,6)=="Divert") {
+            q_divert.push(d[i]);
+        }
+
+        else if (d[i].Catégorie.substring(0,5)=="Sport") {
+            q_sports.push(d[i]);
+        }
+
+        else if (d[i].Catégorie.substring(0,7)=="Science") {
+            q_sciences.push(d[i]);
+        }
+
+        else {
+            q_autre.push(d[i]);
+        }
+
+    };// fin de boucle for
+
+    //console.log(shuffle(q_autre))
+    return {q_autre, q_sciences, q_sports, q_divert, q_art, q_histoire, q_geo};
+
+};// fin de array_split 
+         
+
+//fonction pour melanger les arrays
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
 function selectionQuestion(id){
     theme = String(id)
     console.log(Object.entries(res.q_autre[c_autre]))
@@ -130,6 +250,14 @@ function removeBackGroundColor(){
     document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Littérature");
     document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Autres");
     document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Sports");
+}
+
+function Hide_Loading(){
+    document.getElementById('Loading_div').hidden = true;
+    document.getElementById('Loading_title').hidden = true;
+    document.getElementById('Loading_btns').hidden = true;
+    document.getElementById('Manual_loading').hidden = true;
+    document.getElementById('Default_loading').hidden = true;
 }
 
 function choixThème(){
