@@ -50,11 +50,12 @@ async function test_fetch2(){
 }
 
 async function test_fetch3(){
-    var result = Papa.parse('DefaultQR.csv', 
-        { download: true, header : true, complete: function(data) { 
-            resultats = data.data
-            console.log(resultats)
-            res = split_array(resultats)
+    let results = []
+    const csvData = Papa.parse('DefaultQR.csv', 
+        { download: true, header : true, complete: reponse => { 
+            results = reponse.data
+            console.log(results)
+            res = split_array(results)
         } 
     });
 }
