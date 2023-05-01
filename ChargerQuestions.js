@@ -23,14 +23,39 @@ async function test_fetch(){
         {mode: 'cors',
         credentials: "same-origin"});
     console.log(response);
-    let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
+    /*let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
         {mode: 'cors'});
-    console.log(response1);
+    console.log(response1);*/
 }
 test_fetch()
 
 async function upload_default(){
-    document.getElementById('TitreThème').textContent = "test1"
+    let response = await fetch('images/Autres/1.jpg',
+        {mode: 'cors',
+        credentials: "same-origin"});
+    console.log(response);
+    console.log(response.text());
+    const rows = response.text().split('\n');
+    for (row of rows) {
+    //Split the row into each of the comma separated values
+        console.log(row.split(","));
+    }
+
+
+    /*fetch('example.csv')
+    .then(response => response.text()) 
+    .then(csvString => {
+        //Split the csv into rows
+        const rows = csvString.split('\n');
+        for (row of rows) {
+        //Split the row into each of the comma separated values
+            console.log(row.split(","));
+        }
+    });*/
+
+
+
+    /*document.getElementById('TitreThème').textContent = "test1"
     let response = await fetch('images/Fonds/1.jpg');
 
     let blob = await response.blob(); // télécharger en tant qu'objet Blob
@@ -46,7 +71,7 @@ async function upload_default(){
       img.remove();
       URL.revokeObjectURL(img.src);
     }, 3000);
-    document.getElementById('TitreThème').textContent = "test2"
+    document.getElementById('TitreThème').textContent = "test2"*/
 
     /*document.getElementById('TitreThème').textContent = "test1"
     var file = "DefaultQR.csv"
@@ -72,7 +97,7 @@ async function upload_default(){
 
     /*var reader = new FileReader();
     reader.readAsText(f2);*/
-    document.getElementById('TitreThème').textContent = "test5"
+    /*document.getElementById('TitreThème').textContent = "test5"
 
     reader.onload = function(event) {
         var csvData = event.target.result;
@@ -85,7 +110,7 @@ async function upload_default(){
 
     reader.onerror = function() {
         alert('Unable to read ' + file.fileName);
-    };
+    };*/
 }
 
 function upload(evt) {
