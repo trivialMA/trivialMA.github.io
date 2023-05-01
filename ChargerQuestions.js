@@ -13,8 +13,8 @@ async function test_fetch(){
     let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
         credentials: "same-origin"});
-    console.log(response);
-    console.log(response.text());
+    /*console.log(response);
+    console.log(response.text());*/
     const rows = response.text().split('\n');
     for (row of rows) {
     //Split the row into each of the comma separated values
@@ -27,10 +27,11 @@ async function upload_default(){
     let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
         credentials: "same-origin"});
-    console.log(response);
-    console.log(response.text());
-    document.getElementById('TitreThème').textContent = response.text()
-    document.getElementById('TitreThème').textContent = response.text().toString()
+    /*console.log(response);
+    console.log(response.text());*/
+    let datacsv = response.text()
+    document.getElementById('TitreThème').textContent = datacsv
+    document.getElementById('TitreThème').textContent = datacsv.toString()
     var result = Papa.parse(response.text(), 
         { header : true, complete: function(data) { resultats = data.data } } );
     //alert (resultats)
