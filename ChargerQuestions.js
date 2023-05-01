@@ -30,6 +30,16 @@ async function upload_default(){
     console.log(response);
     console.log(response.text());
     document.getElementById('TitreThème').textContent = response.text()
+    document.getElementById('TitreThème').textContent = response.text().toString()
+    var result = Papa.parse(response.text(), 
+        { header : true, complete: function(data) { resultats = data.data } } );
+    //alert (resultats)
+    /*console.log(resultats)    
+    window.retour = split_array(resultats)
+    localStorage.setItem("retour", JSON.stringify(retour));
+    console.log(retour)*/
+    res = split_array(resultats)
+    console.log(res)
     /*const rows = response.text().split('\n');
     for (row of rows) {
     //Split the row into each of the comma separated values
