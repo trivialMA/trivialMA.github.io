@@ -23,7 +23,7 @@ async function test_fetch(){
 }
 /*test_fetch()*/
 
-async function test_fetch2(){
+/*async function test_fetch2(){
     fetch('DefaultQR.csv')
     .then(response => response.text()) 
     .then(csvString => {
@@ -34,6 +34,16 @@ async function test_fetch2(){
             console.log(row.split(","));
         }
     });
+}
+test_fetch2()*/
+
+async function test_fetch2(){
+    var result = Papa.parse('DefaultQR.csv', 
+        { header : true, complete: function(data) { resultats = data.data } } );
+    console.log(result)
+    console.log(resultats)
+    res = split_array(resultats)
+    console.log(res)
 }
 test_fetch2()
 
@@ -142,7 +152,7 @@ function upload(evt) {
         var csvData = event.target.result;
         document.getElementById('TitreThème').textContent = csvData.toString()
         var result = Papa.parse(csvData, 
-            { header : true, complete: function(data) { resultats = data.data } } );
+            { download: true, header : true, complete: function(data) { resultats = data.data } } );
         //alert (resultats)
         /*console.log(resultats)    
         window.retour = split_array(resultats)
