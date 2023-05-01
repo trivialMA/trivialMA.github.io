@@ -21,7 +21,7 @@ async function test_fetch(){
         console.log(row.split(","));
     }
 }
-test_fetch()
+/*test_fetch()*/
 
 async function test_fetch2(){
     fetch('example.csv')
