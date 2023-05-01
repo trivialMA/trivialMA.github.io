@@ -38,15 +38,15 @@ async function test_fetch2(){
 test_fetch2()
 
 async function upload_default(){
-    let response = await fetch('images/Autres/1.jpg',
+    /*let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
         credentials: "same-origin"});
     /*console.log(response);
-    console.log(response.text());*/
+    console.log(response.text());
     let datacsv = response.text()
     document.getElementById('TitreThème').textContent = datacsv
-    document.getElementById('TitreThème').textContent = datacsv.toString()
-    var result = Papa.parse(response.text(), 
+    document.getElementById('TitreThème').textContent = datacsv.toString()*/
+    var result = Papa.parse('DefaultQR.csv', 
         { header : true, complete: function(data) { resultats = data.data } } );
     //alert (resultats)
     /*console.log(resultats)    
