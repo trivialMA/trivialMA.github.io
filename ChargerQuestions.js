@@ -30,11 +30,11 @@ async function upload_default(){
     console.log(response);
     console.log(response.text());
     document.getElementById('TitreThème').textContent = response.text()
-    const rows = response.text().split('\n');
+    /*const rows = response.text().split('\n');
     for (row of rows) {
     //Split the row into each of the comma separated values
         console.log(row.split(","));
-    }
+    }*/
 
 
     /*fetch('example.csv')
