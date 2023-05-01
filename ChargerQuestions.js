@@ -38,14 +38,24 @@ async function test_fetch(){
 test_fetch2()*/
 
 async function test_fetch2(){
+    fetch('DefaultQR.csv')
+    .then(response => response.text()) 
+    .then(csvString => { 
+        var result = Papa.parse(csvString, 
+        {header : true, complete: function(data) { resultats = data.data } } );
+        console.log(result)
+        console.log(resultats)
+        res = split_array(resultats)
+    });
+}
+
+async function test_fetch3(){
     var result = Papa.parse('DefaultQR.csv', 
         { header : true, complete: function(data) { resultats = data.data } } );
     console.log(result)
     console.log(resultats)
     res = split_array(resultats)
-    console.log(res)
 }
-test_fetch2()
 
 async function upload_default(){
     /*let response = await fetch('images/Autres/1.jpg',
@@ -54,11 +64,6 @@ async function upload_default(){
     console.log(response);*/
     var result = Papa.parse('DefaultQR.csv', 
         { download: true, header : true, complete: function(data) { resultats = data.data } } );
-    //alert (resultats)
-    /*console.log(resultats)    
-    window.retour = split_array(resultats)
-    localStorage.setItem("retour", JSON.stringify(retour));
-    console.log(retour)*/
     console.log(result)
     console.log(resultats)
     res = split_array(resultats)
