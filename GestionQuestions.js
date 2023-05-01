@@ -258,6 +258,9 @@ function Hide_Loading(){
     document.getElementById('Loading_btns').hidden = true;
     document.getElementById('Manual_loading').hidden = true;
     document.getElementById('Default_loading').hidden = true;
+
+    document.getElementById('btns_div').hidden = false;
+    document.getElementById('Bulle-Titre').hidden = false;
 }
 
 function choixThème(){
