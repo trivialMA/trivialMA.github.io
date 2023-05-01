@@ -41,11 +41,7 @@ async function upload_default(){
     /*let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
         credentials: "same-origin"});
-    /*console.log(response);
-    console.log(response.text());
-    let datacsv = response.text()
-    document.getElementById('TitreThème').textContent = datacsv
-    document.getElementById('TitreThème').textContent = datacsv.toString()*/
+    console.log(response);*/
     var result = Papa.parse('DefaultQR.csv', 
         { header : true, complete: function(data) { resultats = data.data } } );
     //alert (resultats)
@@ -53,6 +49,8 @@ async function upload_default(){
     window.retour = split_array(resultats)
     localStorage.setItem("retour", JSON.stringify(retour));
     console.log(retour)*/
+    console.log(result)
+    console.log(resultats)
     res = split_array(resultats)
     console.log(res)
     /*const rows = response.text().split('\n');
