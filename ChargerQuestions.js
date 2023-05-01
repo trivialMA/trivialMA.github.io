@@ -18,6 +18,17 @@ function test(){
     document.getElementById('TitreThème').textContent = "test4"
 }
 
+async function test_fetch(){
+    let response = await fetch('images/Autres/1.jpg',
+        {mode: 'cors',
+        credentials: "same-origin"});
+    console.log(response);
+    let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
+        {mode: 'cors'});
+    console.log(response1);
+}
+test_fetch()
+
 async function upload_default(){
     document.getElementById('TitreThème').textContent = "test1"
     let response = await fetch('images/Fonds/1.jpg');
