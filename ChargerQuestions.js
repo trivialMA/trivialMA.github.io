@@ -51,7 +51,7 @@ async function test_fetch2(){
 
 async function test_fetch3(){
     var result = Papa.parse('DefaultQR.csv', 
-        { header : true, complete: function(data) { resultats = data.data } } );
+        { download: true, header : true, complete: function(data) { resultats = data.data } } );
     console.log(result)
     console.log(resultats)
     res = split_array(resultats)
