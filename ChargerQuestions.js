@@ -24,7 +24,7 @@ async function test_fetch(){
 /*test_fetch()*/
 
 async function test_fetch2(){
-    fetch('example.csv')
+    fetch('images/Autres/1.jpg')
     .then(response => response.text()) 
     .then(csvString => {
         //Split the csv into rows
