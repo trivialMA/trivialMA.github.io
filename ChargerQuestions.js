@@ -24,7 +24,7 @@ async function test_fetch(){
 /*test_fetch()*/
 
 async function test_fetch2(){
-    fetch('images/Autres/1.jpg')
+    fetch('DefaultQR.csv')
     .then(response => response.text()) 
     .then(csvString => {
         //Split the csv into rows
