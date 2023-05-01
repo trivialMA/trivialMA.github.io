@@ -5,18 +5,6 @@
 
 let resultats;
 let res;
-/*const fs = require("fs");
-
-function test(){
-    document.getElementById('TitreThème').textContent = "test1"
-    document.getElementById('TitreThème').textContent = "test11"
-    fs.readFile("DefaultQR.csv", function(err, data) {
-      document.getElementById('TitreThème').textContent = "test2"
-      document.getElementById('TitreThème').textContent = "test3"
-      console.log(data.toString())
-    });
-    document.getElementById('TitreThème').textContent = "test4"
-}*/
 
 async function test_fetch(){
     /*let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
