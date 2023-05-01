@@ -27,11 +27,11 @@ async function test_fetch3(){
 }*/
 
 async function upload_default(){
-    let results = []
+    let results = [];
     const csvData = Papa.parse('DefaultQR.csv', 
         { download: true, header : true, complete: reponse => { 
-            results = reponse.data
-            res = split_array(results)
+            results = reponse.data;
+            res = split_array(results);
         } 
     });
 }
