@@ -6,45 +6,12 @@
 let resultats;
 let res;
 
-async function test_fetch(){
-    /*let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
-        {mode: 'cors'});
-    console.log(response1);*/
-    let response = await fetch('images/Autres/1.jpg',
-        {mode: 'cors',
-        credentials: "same-origin"});
-    /*console.log(response);
-    console.log(response.text());*/
-    const rows = response.text().split('\n');
-    for (row of rows) {
-    //Split the row into each of the comma separated values
-        console.log(row.split(","));
-    }
-}
-/*test_fetch()*/
-
 /*async function test_fetch2(){
-    fetch('DefaultQR.csv')
-    .then(response => response.text()) 
-    .then(csvString => {
-        //Split the csv into rows
-        const rows = csvString.split('\n');
-        for (row of rows) {
-        //Split the row into each of the comma separated values
-            console.log(row.split(","));
-        }
-    });
-}
-test_fetch2()*/
-
-async function test_fetch2(){
     fetch('DefaultQR.csv')
     .then(response => response.text()) 
     .then(csvString => { 
         var result = Papa.parse(csvString, 
         {header : true, complete: function(data) { resultats = data.data } } );
-        console.log(result)
-        console.log(resultats)
         res = split_array(resultats)
     });
 }
@@ -54,16 +21,15 @@ async function test_fetch3(){
     const csvData = Papa.parse('DefaultQR.csv', 
         { download: true, header : true, complete: reponse => { 
             results = reponse.data
-            console.log(results)
             res = split_array(results)
         } 
     });
-}
+}*/
 
 async function upload_default(){
-    var result = Papa.parse('DefaultQR.csv', 
-        { download: true, header : true, complete: function(data) { resultats = data.data } } );
-    res = split_array(resultats)
+    const csvData = Papa.parse('DefaultQR.csv', 
+        { download: true, header : true, complete: reponse => {res = split_array(reponse.data)} 
+    });
 }
 
 function upload(evt) {
