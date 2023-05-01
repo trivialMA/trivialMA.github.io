@@ -19,13 +19,19 @@ function test(){
 }
 
 async function test_fetch(){
+    /*let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
+        {mode: 'cors'});
+    console.log(response1);*/
     let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
         credentials: "same-origin"});
     console.log(response);
-    /*let response1 = await fetch('https://github.com/trivialMA/trivialMA.github.io/blob/main/images/Autres/1.jpg',
-        {mode: 'cors'});
-    console.log(response1);*/
+    console.log(response.text());
+    const rows = response.text().split('\n');
+    for (row of rows) {
+    //Split the row into each of the comma separated values
+        console.log(row.split(","));
+    }
 }
 test_fetch()
 
