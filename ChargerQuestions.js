@@ -5,14 +5,67 @@
 
 let resultats;
 let res;
+const fs = require("fs");
 
-function upload_default(){
-    var file = "defaultQR.csv";
-    var reader = new FileReader();
-    reader.readAsText(file);
+function test(){
+    document.getElementById('TitreThème').textContent = "test1"
+    document.getElementById('TitreThème').textContent = "test11"
+    fs.readFile("DefaultQR.csv", function(err, data) {
+      document.getElementById('TitreThème').textContent = "test2"
+      document.getElementById('TitreThème').textContent = "test3"
+      console.log(data.toString())
+    });
+    document.getElementById('TitreThème').textContent = "test4"
+}
+
+async function upload_default(){
+    document.getElementById('TitreThème').textContent = "test1"
+    let response = await fetch('images/Fonds/1.jpg');
+
+    let blob = await response.blob(); // télécharger en tant qu'objet Blob
+    // create <img> for it
+    let img = document.createElement('img');
+    img.style = 'position:fixed;top:10px;left:10px;width:100px';
+    document.body.append(img);
+
+    // l'afficher
+    img.src = URL.createObjectURL(blob);
+
+    setTimeout(() => { // le cacher après 3 secondes
+      img.remove();
+      URL.revokeObjectURL(img.src);
+    }, 3000);
+    document.getElementById('TitreThème').textContent = "test2"
+
+    /*document.getElementById('TitreThème').textContent = "test1"
+    var file = "DefaultQR.csv"
+    document.getElementById('TitreThème').textContent = "test2"
+    const response = await fetch("https://github.com/trivialMA/trivialMA.github.io/blob/main/QRLAST2.csv");
+    if (response.ok) { // if HTTP-status is 200-299
+      // obtenir le corps de réponse (la méthode expliquée ci-dessous)
+        document.getElementById('TitreThème').textContent = "test3"
+        let json = await response.json();
+    } else {
+        document.getElementById('TitreThème').textContent = "test4"
+        alert("HTTP-Error: " + response.status);
+    }
+    document.getElementById('TitreThème').textContent = "test3"*/
+    /*let url = new URL("https://github.com/trivialMA/trivialMA.github.io/blob/main/QRLAST2.csv");
+    document.getElementById('TitreThème').textContent = "test3"
+    let url = new URL("DefaultQR.csv");
+    document.getElementById('TitreThème').textContent = "test4"*/
+    /*const response = await fetch("DefaultQR.csv");
+    document.getElementById('TitreThème').textContent = "test4"*/
+    /*const response2 = await fetch(url);
+    document.getElementById('TitreThème').textContent = "test5"*/
+
+    /*var reader = new FileReader();
+    reader.readAsText(f2);*/
+    document.getElementById('TitreThème').textContent = "test5"
 
     reader.onload = function(event) {
         var csvData = event.target.result;
+        document.getElementById('TitreThème').textContent = csvData.toString()
         var result = Papa.parse(csvData, 
             { header : true, complete: function(data) { resultats = data.data } } );
         res = split_array(resultats)
@@ -33,6 +86,7 @@ function upload(evt) {
 
     reader.onload = function(event) {
         var csvData = event.target.result;
+        document.getElementById('TitreThème').textContent = csvData.toString()
         var result = Papa.parse(csvData, 
             { header : true, complete: function(data) { resultats = data.data } } );
         //alert (resultats)
