@@ -12,25 +12,16 @@
     <link rel="stylesheet" href="bootstrap.css"/>
 
     <!-- Titre page HTML -->
-    <title>Data Loading</title>
+    <title>Trivial Pursuit Mes Amours</title>
 
     <!-- JavaScript -->
-    <script type="text/javascript" src="ChargerQuestions.js" ></script>
-    <script language="javascript">
-    /*var retrievedObject = JSON.parse(localStorage.getItem('retour'));
-    var seven_array = Object.values(retrievedObject)
-    var zbeul=r_q(seven_array);*/
-    </script>
+    <!-- <script type="text/javascript" src="ChargerQuestions.js" ></script> -->
     <script language="javascript" src="GestionQuestions.js"></script>
     <!-- chargement de la library papa parse -->
     <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.js" ></script> 
     <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
-    <!-- <link rel="shortcut icon" href="favicon.ico"> -->
-    <!-- <link rel="shortcut icon" href="https://github.com/trivialMA/trivialMA.github.io/tree/main/image/logoTP.png"> -->
-
-    <!-- <script language="javascript" src="test_load.js"></script> -->
         
   </head>
 
@@ -73,10 +64,10 @@
     </div>
     
     <!-- Playing -->
-    <div id="Bulle-Titre" style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
+    <div id="Bulle-Titre" hidden=true style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
         <h1 id="TitreThème" class="display-2 text-center">Choisissez un thème : </h1>
     </div>
-    <div class="container text-center">
+    <div class="container text-center" hidden=true>
         <button type="button" id="Géographie" class="btn bouton"
             onClick="selectionQuestion(id);">
             Géographie
