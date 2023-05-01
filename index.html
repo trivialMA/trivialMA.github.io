@@ -25,7 +25,8 @@
         
   </head>
 
-  <body style="background-image: url(images/mesAmours.jpg); padding:0; background-repeat: no-repeat; font-size: 250%; background-size: cover; background-position: 50% 25%;">
+  <!-- <body style="background-image: url(images/mesAmours.jpg); padding:0; background-repeat: no-repeat; font-size: 250%; background-size: cover; background-position: 50% 25%;"> -->
+  <body class="backgroundbody">
 
     <!-- Logo Trivial -->
     <header>
@@ -44,10 +45,8 @@
     </header>
 
     <!-- Loading -->
-    <div id="Loading_div" style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
-        <h1 id="Loading_title" class="display-2 text-center">Chargez les questions :</h1>
-    </div>
-    <div id="Loading_btns" class="container text-center">
+    <h1 id="Loading_title" class="display-1 text-center title">Chargez les questions</h1>
+    <div id="Loading_btns" class="loading_btns">
         <button id="Manual_loading" type="button" class="btn bouton bouton2" onclick="importData();">
             Manuellement
         </button>
@@ -56,6 +55,8 @@
         </button>
     </div>
     
+
+
     <!-- Playing -->
     <div id="Bulle-Titre" hidden=true style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
         <h1 id="TitreThème" class="display-2 text-center">Choisissez un thème : </h1>

@@ -271,7 +271,7 @@ function removeBackGroundColor(){
 }
 
 function Hide_Loading(){
-    document.getElementById('Loading_div').hidden = true;
+    document.getElementById('Loading_title').hidden = true;
     document.getElementById('Loading_btns').hidden = true;
 
     document.getElementById('btns_div').hidden = false;
