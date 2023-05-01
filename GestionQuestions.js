@@ -261,6 +261,8 @@ function Hide_Loading(){
 
     document.getElementById('btns_div').hidden = false;
     document.getElementById('Bulle-Titre').hidden = false;
+    console.log(document.getElementById('btns_div').hidden)
+    console.log(document.getElementById('Bulle-Titre').hidden)
 }
 
 function choixThème(){
