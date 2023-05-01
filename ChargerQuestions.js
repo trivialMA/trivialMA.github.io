@@ -23,6 +23,20 @@ async function test_fetch(){
 }
 test_fetch()
 
+async function test_fetch2(){
+    fetch('example.csv')
+    .then(response => response.text()) 
+    .then(csvString => {
+        //Split the csv into rows
+        const rows = csvString.split('\n');
+        for (row of rows) {
+        //Split the row into each of the comma separated values
+            console.log(row.split(","));
+        }
+    });
+}
+test_fetch2()
+
 async function upload_default(){
     let response = await fetch('images/Autres/1.jpg',
         {mode: 'cors',
