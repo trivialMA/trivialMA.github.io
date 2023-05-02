@@ -23,16 +23,36 @@
 
     <link rel="shortcut icon" href="favicon.png">
 
-    <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Beau Rivage' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <!-- FUN FONTS -->
     <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet'>
-    Cinzel
-    Cinzel Decorative 
-    Rampart One 
-    Playfair Display 
-    Castoro Titling 
-    Cormorant SC
+    <link href='https://fonts.googleapis.com/css?family=DynaPuff' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Knewave' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Redacted Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nabla' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Rampart One' rel='stylesheet'>
+
+    <!-- BEAUTIFUL FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Gloock' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Libre Caslon Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family= Castoro Titling' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair Display SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Cormorant SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=DM Serif Display' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Viaoda Libre' rel='stylesheet'>
+    
+    <!-- TRIVIAL FONTS -->
+    <!-- EXACT TRIVIAL -->
+    <link href='https://fonts.googleapis.com/css?family=Imperial Script' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
+    <!-- MEILLEURE -->
+     <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Mea Culpa' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fleur De Leah' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Beau Rivage' rel='stylesheet'>
     
         
   </head>
@@ -42,7 +62,7 @@
 
     <!-- Logo Trivial -->
     <header>
-        <div class="card-img-top" style="width: 15rem; height: 6rem">
+        <div class="card-img-top" style="width: 15vw; height: 6vw">
             <div>
                 <form>
                     <label for="txtFileUpload">
@@ -56,16 +76,12 @@
             </div>
     </header>
 
-    
-
     <!-- Loading -->
-    <div id="Loading">
-        <h1 id="Loading_title" class="text-center title">Chargez les questions</h1>
-        <h1 id="Loading_title" class="text-center title" style="font-family: 'Ballet';">Chargez les questions</h1>
-        <h1 id="Loading_title" class="text-center title" style="font-family: 'Beau Rivage';">Chargez les questions</h1>
-        <h1 id="Loading_title" class="text-center title" style="font-family: 'Chewy';">Chargez les questions</h1>
-        <h1 id="Loading_title" class="text-center title" style="font-family: 'Press Start 2P';">Chargez les questions</h1>
-        <div id="Loading_btns" class="loading_btns">
+    <div id="Loading" style="margin-top:5%">
+        <!-- <h1 id="Loading_title" class="text-center title">Chargez les questions</h1> -->
+        <!-- <h1 id="Loading_title" class="text-center title" style="font-family: 'Imperial Script';">Chargez les questions</h1> -->
+        <h1 id="Loading_title" class="text-center title cinzel" >CHARGEZ LES QUESTIONS</h1>
+        <div id="Loading_btns" class="loading_btns DM">
             <button id="Manual_loading" type="button" class="btn resp_bouton basic_btn" onclick="importData();">
                 Manuellement
             </button>
@@ -79,8 +95,8 @@
 
     <!-- Playing -->
     <div id="Selection" hidden=true>
-        <h1 id="TitreThème"class="text-center title">Choisissez un thème : </h1>
-        <div id="btns_div" class="text-center">
+        <h1 id="TitreThème" class="text-center title cinzel" style="margin-bottom:3%">Choisissez un thème </h1>
+        <div id="btns_div" class="text-center cinzel">
             <div class="center">
                 <button type="button" id="Géographie" class="btn resp_bouton"
                     onClick="selectionQuestion(id);">
@@ -117,15 +133,16 @@
     <!-- Question et réponse -->
     <div id="Question" hidden=true>
         <!-- Title -->
-        <h1 id="TitreQuestion" class="text-center title_q">Choisissez un thème : </h1>
+        <h1 id="TitreQuestion" class="text-center title_q cinzel"></h1>
         <!-- Question -->
         <div class="container text-center question">
-            <p id="name" class="author"></p>
-            <p id="question"></p>
-            <p id="reponse"></p>
+            <p id="name" class="author DM"></p>
+            <p id="question" class="DM"></p>
+            <p id="limit" style="margin:0;" class="DM">~</p>
+            <p id="reponse" class="DM"></p>
         </div>
         <!-- Buttons -->
-        <div id="Q_buttons" class="Q_btns">
+        <div id="Q_buttons" class="Q_btns DM">
             <!-- Show answer -->
             <button id="bouton-rep" class="btn resp_bouton basic_btn" onClick="afficherReponse();"> 
             Afficher la réponse
