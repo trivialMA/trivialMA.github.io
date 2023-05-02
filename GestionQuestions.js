@@ -283,13 +283,13 @@ function afficherReponse(){
     if (document.getElementById('reponse').textContent[0] == null){
         document.getElementById('reponse').textContent = reponse;
 	    // On change aussi ce qui est écrit sur le bouton
-	    document.querySelector('b').textContent = "Masquer la réponse";
+	    document.getElementById('bouton-rep').textContent = "Masquer la réponse";
         }      
     // Si la reponse n'est pas vide (affichée), on la cache
     else {
         document.getElementById('reponse').textContent = null;
 	    // On remet le bon texte sur le bouton
-	    document.querySelector('b').textContent = "Afficher la réponse";
+	    document.getElementById('bouton-rep').textContent = "Afficher la réponse";
         }
     }
 
