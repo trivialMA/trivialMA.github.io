@@ -15,6 +15,15 @@ html, body {
   backdrop-filter: brightness(50%);
 }
 
+.backgroundbody_selection {
+  background-position: 50% 25%;
+}
+
+.backgroundbody_question {
+  background-position:center fixed;
+  background-repeat: no-repeat;
+}
+
 .loading_btns {
   position: fixed;
   bottom: 10%;
@@ -22,18 +31,81 @@ html, body {
   text-align: center;
 }
 
+.Q_btns {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.center {
+  margin:auto;
+  width: 90%;
+  /*border: 1px solid red;*/
+}
+
+.bot {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin:auto;
+  /*border: 1px solid white;*/
+}
+
 .title {
   color: white;
+  font-size:8vw;
   width: 100%;
   margin-top:5%;
+  background:transparent;
+  margin:auto;
+}
+
+.title_q {
+  color: white;
+  font-size:4vw;
+  width: 100%;
+  margin-top:5%;
+  background:transparent;
+  margin:auto;
+}
+
+.question {
+  font-size:2vw;
+  color:white;
+  border: 3px solid;
+}
+
+.font{
+  font-stretch: normal;
+  font-variant: small-caps slashed-zero;
+  font-style: italic;
+  font-weight: 100;
+  line-height: 32px;
+  font-family: Georgia, serif;
+}
+
+#question {
+  border: 3px solid;
+}
+
+.author {
+  font-size:3vw;
+  border: 3px solid;
+  margin-bottom:0;
+}
+
+#reponse {
+  font-size:2vw;
+  border: 3px solid;
+  font-weight: bolder;
 }
 
 .image-upload>input {
   display: none;
 }
 
-.bouton
-{
+.bouton {
 	width: 340px;
 	flex-grow: 1;
 	flex-basis: auto;
@@ -43,18 +115,35 @@ html, body {
   font-size:xx-large
 }
 
-.bouton2 {
+.resp_bouton_1 {
+  font-size: 1.3vw;
+  width: 16vw;
+  height: 5vw;
+  margin: 1vw;
+  border-radius:10rem;
+}
+
+.resp_bouton {
+  font-size: 1.7vw;
+  width: 20vw;
+  height: 6vw;
+  margin: 1vw;
+  border-radius:10rem;
+}
+
+.basic_btn {
   color: #fff;
   background-color: transparent;
   border-color: white;
-  font-size:large
+  /*font-size:large*/
 }
 
-.bouton2:hover {
+.basic_btn:hover {
   color: #fff;
-  background-color: darkred;
-  border-color: #fff;
+  /*background-color: darkred;*/
+  /*border-color: #fff;*/
   font-weight: bold;
+  outline: 10px solid #fff;
 }
 
 .bouton3 {
@@ -66,12 +155,17 @@ html, body {
 .bouton3:hover {
   color: #fff;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+  outline: 10px solid #fff;
 }
 
-.Titre-Question{
-font-size:normal !important;
+#TitreQuestion{
+  font-size:normal !important;
+  background-color: white;
+  width:70%;
+  margin:auto;
+  border-radius:3rem;
+  padding:8px
 }
 
 
@@ -80,134 +174,112 @@ background-color: #fff !important;
 color:#000;
 }
 
-.Bulle-Question-Géographie{
-background-color: #007bff !important;
-color:#fff;
-}
-
-.Bulle-Question-Histoire{
-background-color: #eae712 !important;
-color:#fff;
-}
-
-.Bulle-Question-Sports{
-background-color: #fa9504 !important;
-color:#fff;
-}
-
-.Bulle-Question-Littérature{
-background-color: #76542a !important;
-color:#fff;
-}
-
-.Bulle-Question-Divertissement{
-background-color: #ff31c4 !important;
-color:#fff;
-}
-
-.Bulle-Question-Autres{
-background-color: #6c757d !important;
-color:#fff;
-}
-
-.Bulle-Question-Sciences{
-background-color: #28a745 !important;
-color:#fff;
-}
-
-
 #Géographie {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #7CBEF1;
+  border-color: #7CBEF1;
 }
-
 #Géographie:hover {
-  color: #fff;
+  outline: 10px solid #7CBEF1;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Géographie{
+  background-color: #7CBEF1 !important;
+  color:#fff;
 }
 
 #Autres {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #C44444;
+  border-color: #C44444;
 }
-
 #Autres:hover {
-  color: #fff;
+  outline: 10px solid #C44444;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Autres{
+  background-color: #C44444 !important;
+  color:#fff;
 }
 
 #Sciences {
   color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: #63A15A;
+  border-color: #63A15A;
 }
-
 #Sciences:hover {
-  color: #fff;
+  outline: 10px solid #63A15A;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Sciences{
+  background-color: #63A15A !important;
+  color:#fff;
 }
 
 #Histoire {
   color: #fff;
-  background-color: #eae712;
-  border-color: #eae712;
+  background-color: #E1D35E;
+  border-color: #E1D35E;
 }
-
 #Histoire:hover {
-  color: #fff;
+  outline: 10px solid #E1D35E;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Histoire{
+  background-color: #E1D35E !important;
+  color:#fff;
 }
 
 #Divertissement {
   color: #fff;
-  background-color: #ff31c4;
-  border-color: #ff31c4;
+  background-color: #E9B4D9;
+  border-color: #E9B4D9;
 }
-
 #Divertissement:hover {
-  color: #fff;
+  outline: 10px solid #E9B4D9;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Divertissement{
+  background-color: #E9B4D9 !important;
+  color:#fff;
 }
 
 #Sports {
   color: #fff;
-  background-color: #fa9504;
-  border-color: #fa9504;
+  background-color: #F2AC6E;
+  border-color: #F2AC6E;
 }
-
 #Sports:hover {
-  color: #fff;
+  outline: 10px solid #F2AC6E;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
+}
+.Bulle-Question-Sports{
+  background-color: #F2AC6E !important;
+  color:#fff;
 }
 
 #Littérature {
   color: #fff;
-  background-color: #76542a;
-  border-color: #76542a;
+  background-color: #9B7859;
+  border-color: #9B7859;
 }
-
 #Littérature:hover {
-  color: #fff;
+  outline: 10px solid #9B7859;
   background-color: transparent;
-  border-color: #fff;
   font-weight: bold;
 }
+.Bulle-Question-Littérature{
+background-color: #9B7859 !important;
+color:#fff;
+}
 
-#bouton-rep {
+/*#bouton-rep {
   color: #fff;
   background-color: #222240;
   border-color: #222240;
@@ -231,7 +303,7 @@ color:#fff;
   background-color: transparent;
   border-color: #fff;
   font-weight: bold;
-}
+}*/
 
 .bouton-accueil {
   color: #fff;

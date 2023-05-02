@@ -22,6 +22,18 @@
     <script type="text/javascript" src="library/PapaParse-5.0.2/papaparse.min.js"></script>
 
     <link rel="shortcut icon" href="favicon.png">
+
+    <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Beau Rivage' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet'>
+    Cinzel
+    Cinzel Decorative 
+    Rampart One 
+    Playfair Display 
+    Castoro Titling 
+    Cormorant SC
+    
         
   </head>
 
@@ -44,82 +56,86 @@
             </div>
     </header>
 
+    
+
     <!-- Loading -->
-    <h1 id="Loading_title" class="display-1 text-center title">Chargez les questions</h1>
-    <div id="Loading_btns" class="loading_btns">
-        <button id="Manual_loading" type="button" class="btn bouton bouton2" onclick="importData();">
-            Manuellement
-        </button>
-        <button id="Default_loading" type="button" class="btn bouton bouton2" onClick="upload_default();">
-            Automatiquement
-        </button>
+    <div id="Loading">
+        <h1 id="Loading_title" class="text-center title">Chargez les questions</h1>
+        <h1 id="Loading_title" class="text-center title" style="font-family: 'Ballet';">Chargez les questions</h1>
+        <h1 id="Loading_title" class="text-center title" style="font-family: 'Beau Rivage';">Chargez les questions</h1>
+        <h1 id="Loading_title" class="text-center title" style="font-family: 'Chewy';">Chargez les questions</h1>
+        <h1 id="Loading_title" class="text-center title" style="font-family: 'Press Start 2P';">Chargez les questions</h1>
+        <div id="Loading_btns" class="loading_btns">
+            <button id="Manual_loading" type="button" class="btn resp_bouton basic_btn" onclick="importData();">
+                Manuellement
+            </button>
+            <button id="Default_loading" type="button" class="btn resp_bouton basic_btn" onClick="upload_default();">
+                Automatiquement
+            </button>
+        </div>
     </div>
     
 
 
     <!-- Playing -->
-    <div id="Bulle-Titre" hidden=true style="background-color: white; width:70%; margin:auto; border-radius:3rem; padding:8px">
-        <h1 id="TitreThème" class="display-2 text-center">Choisissez un thème : </h1>
-    </div>
-    <div id="btns_div" class="container text-center" hidden=true>
-        <button type="button" id="Géographie" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Géographie
-        </button>
-        <button type="button" id="Littérature" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Littérature
-        </button>
-        <button type="button" id="Divertissement" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Divertissement
-        </button>
-        <button type="button" id="Histoire" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Histoire
-        </button>
-        <button type="button" id="Sciences" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Sciences
-        </button>
-        <button type="button" id="Sports" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Sport
-        </button>
-        <button type="button" id="Autres" class="btn bouton"
-            onClick="selectionQuestion(id);">
-            Autre
-        </button>
+    <div id="Selection" hidden=true>
+        <h1 id="TitreThème"class="text-center title">Choisissez un thème : </h1>
+        <div id="btns_div" class="text-center">
+            <div class="center">
+                <button type="button" id="Géographie" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Géographie
+                </button>
+                <button type="button" id="Littérature" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Littérature
+                </button>
+                <button type="button" id="Divertissement" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Divertissement
+                </button>
+                <button type="button" id="Histoire" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Histoire
+                </button>
+                <button type="button" id="Sciences" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Sciences
+                </button>
+                <button type="button" id="Sports" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Sport
+                </button>
+                <button type="button" id="Autres" class="btn resp_bouton"
+                    onClick="selectionQuestion(id);">
+                    Autre
+                </button>
+            </div>
+        </div>
     </div>
 
-        
-        <h2 id="TitreQuestion" class="text-center"></h2>
-        <!-- Question et réponse -->
-    <section class="container text-center" style="border-radius:3rem; background-color: white">
-        <div class="container text-center">
+    <!-- Question et réponse -->
+    <div id="Question" hidden=true>
+        <!-- Title -->
+        <h1 id="TitreQuestion" class="text-center title_q">Choisissez un thème : </h1>
+        <!-- Question -->
+        <div class="container text-center question">
+            <p id="name" class="author"></p>
             <p id="question"></p>
-            <p style="font-weight: bolder" id="reponse"></p>
+            <p id="reponse"></p>
         </div>
-    </section>
-
-        <section class="container text-center" style="border-radius:1rem; background-color: white">
-        <div class="container text-center">
-
-            <font size="+3"><p id="name"></p></font>
-        </div>
-    </section>
-        <!-- Options -->
-        <div class="container text-center">
-            <!-- Bouton afficher la réponse -->
-            <b id="bouton-rep" class="btn bouton" onClick="afficherReponse();" hidden=true> 
+        <!-- Buttons -->
+        <div id="Q_buttons" class="Q_btns">
+            <!-- Show answer -->
+            <button id="bouton-rep" class="btn resp_bouton basic_btn" onClick="afficherReponse();"> 
             Afficher la réponse
-            </b>
-
-            <!-- Bouton Choisir une nouvelle question -->
-            <b id="bouton-newQ" class="btn bouton" onClick="choixThème();" hidden=true>
+            </button>
+            <!-- New Question -->
+            <button id="bouton-newQ" class="btn resp_bouton basic_btn" onClick="choixThème();">
             Choisir une nouvelle question
-            </b>
+            </button>
         </div>
-    
+    </div>
+
   </body>
 </html>

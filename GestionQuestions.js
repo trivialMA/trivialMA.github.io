@@ -225,86 +225,52 @@ function selectionQuestion(id){
 }
 
 
-// Arguments : le thème, la question
 function afficherCarte(theme,q1, name, nb_photos){
-        // On affiche la question
+        // Hide Selection div
+        document.getElementById('Selection').hidden = true;
+        // Show Question div
+        document.getElementById('Question').hidden = false;
+
+        // Print content
+        document.getElementById('TitreQuestion').textContent = "Question " + theme;
+        document.getElementById('TitreQuestion').classList.add("Bulle-Question-" + theme);
         document.getElementById('question').textContent = q1;
-        // On affiche le nom
-        document.getElementById('name').textContent = "La question a été posée par " + name
-
-       console.log(document);
-
-        // On cache la réponse
+        document.getElementById('name').textContent = name
         document.getElementById('reponse').textContent = null;
-        // On affiche les boutons "afficher reponse" et "choisir une nouvelle question".
-        document.getElementById('bouton-rep').hidden=false;
-        document.getElementById('bouton-newQ').hidden=false;
-        // On cache le titre "choissez un thème"
-        document.getElementById('TitreThème').textContent = "Question de type " + theme;
-        document.getElementById('TitreThème').classList.remove("display-2");
-        //document.getElementById('Bulle-Titre').style.backgroundColor = "black"
-        document.getElementById('Bulle-Titre').style.width = "50%"
-        document.getElementById('Bulle-Titre').classList.remove("Bulle-Titre");
-        document.getElementById('Bulle-Titre').classList.add("Bulle-Question-" + theme);
-        // On affiche le titre "Question de type ..."
-        //document.getElementById('TitreQuestion').textContent = "Question de type ... " + theme;
-        // On cache les boutons de thèmes
-        let listeBoutons = document.querySelectorAll('button');
-        for (var i = listeBoutons.length - 1; i >= 0; i--) {
-            listeBoutons[i].hidden = true;}
-
-	    // On change le fond directement depuis le JS en fonction du theme
-    	document.body.style.backgroundSize = "cover"; 
+        // On change le fond directement depuis le JS en fonction du theme
+        document.body.classList.add("backgroundbody_question");
+        document.body.classList.remove("backgroundbody_selection");
         document.body.style.backgroundImage = "url(images/"+theme+"/"+getRandomInt(nb_photos)+".jpg)";
-        document.body.style.backgroundRepeat = "no-repeat";
-	document.body.style.backgroundPosition = "center fixed"; // Pour les fonds autres que la photo, on cale en haut à gauche
 }
 
 function removeBackGroundColor(){
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Histoire");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Géographie");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Sciences");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Divertissement");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Littérature");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Autres");
-    document.getElementById('Bulle-Titre').classList.remove("Bulle-Question-Sports");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Histoire");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Géographie");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Sciences");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Divertissement");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Littérature");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Autres");
+    document.getElementById('TitreQuestion').classList.remove("Bulle-Question-Sports");
 }
 
 function Hide_Loading(){
-    document.getElementById('Loading_title').hidden = true;
-    document.getElementById('Loading_btns').hidden = true;
-
-    document.getElementById('btns_div').hidden = false;
-    document.getElementById('Bulle-Titre').hidden = false;
+    // Hide Loading div
+    document.getElementById('Loading').hidden = true;
+    // Show Selection div
+    document.getElementById('Selection').hidden = false;
 }
 
 function choixThème(){
-    // On cache la question et la réponse
-    document.getElementById('question').textContent = null;
-    document.getElementById('reponse').textContent = null;
-    document.getElementById('name').textContent = null;
-    // On cache les bouton "afficher la réponse" et "choisir une nouvelle question"
-    document.getElementById('bouton-rep').hidden=true;
-    document.getElementById('bouton-newQ').hidden=true;
-    // On affiche le titre "choissez un thème"
-    document.getElementById('TitreThème').textContent = "Choisissez un thème :";
-    document.getElementById('TitreThème').classList.add("display-2");
+    // Hide Question div
+    document.getElementById('Question').hidden = true;
+    // Show Selection div
+    document.getElementById('Selection').hidden = false;
+
     removeBackGroundColor();
-    document.getElementById('Bulle-Titre').style.width = "70%"
-    document.getElementById('Bulle-Titre').classList.add("Bulle-Titre");
-    // On cache le titre "Question de type ..."
-    //document.getElementById('TitreQuestion').textContent = null;
-    // on affiche les boutons de thèmes
-    let listeBoutons = document.querySelectorAll('button');
-    for (var i = listeBoutons.length - 1; i >= 0; i--) {
-        listeBoutons[i].hidden = false;
-    }
     // on remet le fond initial
     document.body.style.backgroundImage = "url(images/Fonds/"+getRandomInt(nb_fonds)+".jpg)";
-    // document.body.style.backgroundRepeat = "no-repeat";
-    document.body.style.backgroundPosition = "50% 25%"; // On recale pour bien voir tout le monde
-    document.body.style.backgroundSize = "cover";    
-
+    document.body.classList.remove("backgroundbody_question");
+    document.body.classList.add("backgroundbody_selection");
 }
 
 
