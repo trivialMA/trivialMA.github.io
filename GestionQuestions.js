@@ -169,13 +169,17 @@ function shuffle(a) {
     return a;
 }
 
+
 function selectionQuestion(id){
     theme = String(id)
-    console.log(Object.entries(res.q_autre[c_autre]))
     if (theme=="Autres"){
         question = res.q_autre[c_autre].Question
         reponse = res.q_autre[c_autre].Réponse
         nom = Object.entries(res.q_autre[c_autre])[id_nom][1]
+        /*const fs = require('fs')
+        const length = fs.readdirSync('/images/Fonds').length
+        console.log("lala");
+        console.log(length);*/
         nb_photos = nb_autre
         c_autre++
     }
