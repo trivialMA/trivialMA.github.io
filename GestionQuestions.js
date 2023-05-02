@@ -22,14 +22,14 @@ var id_difficulte=5
 var id_troll=7
 
 //nb de photos par catégories
-var nb_sciences=7
-var nb_histoire=3
-var nb_divert=10
-var nb_sports=9
-var nb_art=5
-var nb_geo=5
-var nb_autre=11
-var nb_fonds=3
+var nb_sciences=11
+var nb_histoire=7
+var nb_divert=16
+var nb_sports=18
+var nb_art=6
+var nb_geo=9
+var nb_autre=58
+var nb_fonds=6
 
 let resultats;
 let res;
