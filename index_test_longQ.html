@@ -61,68 +61,17 @@
         <img style="width: 13vw;" src="images/Logo_white6.png"/>
     </header>
 
-    <!-- Loading -->
-    <div id="Loading" style="margin-top:5%">
-        <h1 id="Loading_title" class="text-center title cinzel" >CHARGEZ LES QUESTIONS</h1>
-        <div id="Loading_btns" class="loading_btns DM">
-            <button id="Manual_loading" type="button" class="btn resp_bouton basic_btn" onclick="importData();">
-                Manuellement
-            </button>
-            <button id="Default_loading" type="button" class="btn resp_bouton basic_btn" onClick="upload_default();">
-                Automatiquement
-            </button>
-        </div>
-    </div>
-
-
-    <!-- Playing -->
-    <div id="Selection" hidden=true>
-        <h1 id="TitreThème" class="text-center title cinzel" style="margin-bottom:3%">Choisissez un thème </h1>
-        <div id="btns_div" class="text-center cinzel">
-            <div class="center">
-                <button type="button" id="Géographie" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Géographie
-                </button>
-                <button type="button" id="Littérature" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Littérature
-                </button>
-                <button type="button" id="Divertissement" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Divertissement
-                </button>
-                <button type="button" id="Histoire" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Histoire
-                </button>
-                <button type="button" id="Sciences" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Sciences
-                </button>
-                <button type="button" id="Sports" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Sport
-                </button>
-                <button type="button" id="Autres" class="btn resp_bouton"
-                    onClick="selectionQuestion(id);">
-                    Autre
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- Question et réponse -->
-    <div id="Question" hidden=true>
+    <div id="Question">
         <!-- Title -->
-        <h1 id="TitreQuestion" class="text-center title_q cinzel"></h1>
+        <h1 id="TitreQuestion" class="text-center title_q cinzel">Question Histoire</h1>
         <!-- Question -->
 
         <div class="container text-center question" style="overflow:auto; max-height: 25vw;">
-            <p id="name" class="author DM"></p>
-            <p id="question" class="DM"></p>
+            <p id="name" class="author DM">Marius</p>
+            <p id="question" class="DM"> Quel est le seul pays de l'asie du sud est parmi Birmanie, Cambodge, Laos, Malaisie, Thailande, Vietnam à ne pas avoir été colonisé par un pays européen ?Quel est le seul pays de l'asie du sud est parmi Birmanie, Cambodge, Laos, Malaisie, Thailande, Vietnam à ne pas avoir été colonisé par un pays européen ?</p>
             <p id="limit" style="margin:0;" class="DM">~</p>
-            <p id="reponse" class="DM"></p>
+            <p id="reponse" class="DM">Quel est le seul pays de l'asie du sud est parmi Birmanie, Cambodge, Laos, Malaisie, Thailande, Vietnam à ne pas avoir été colonisé par un pays européen ?Quel est le seul pays de l'asie du sud est parmi Birmanie, Cambodge, Laos, Malaisie, Thailande, Vietnam à ne pas avoir été colonisé par un pays européen ? </p>
         </div>
         <!-- Buttons -->
         <div id="Q_buttons" class="Q_btns DM">
