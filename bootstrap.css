@@ -92,25 +92,6 @@ html, body {
   }
 }
 
-.title_q {
-  color: white;
-  font-size:4vw;
-  width: 100%;
-  margin-top:5%;
-  background:transparent;
-  margin:auto;
-}
-
-@media (max-width: 500px) {
-  .title_q {
-    color: white;
-    font-size:13vw;
-    width: 100%;
-    margin-top:5%;
-    background:transparent;
-    margin:auto;
-  }
-}
 
 .question {
   font-size:2vw;
@@ -165,7 +146,7 @@ html, body {
 
 @media (max-width: 500px) {
   .author {
-    font-size:10vw;
+    font-size:9vw;
     /*border: 3px solid;*/
     margin-bottom:0;
     font-weight: bold;
@@ -257,25 +238,30 @@ html, body {
 }
 
 #TitreQuestion{
-  font-size:normal !important;
+  color: white;
+  font-size:4vw;
   background-color: white;
+  background:transparent;
   width:70%;
+  margin-top:5%;
   margin:auto;
   border-radius:3rem;
   padding:8px
 }
 
 @media (max-width: 500px) {
-    #TitreQuestion{
-    font-size:normal !important;
+  #TitreQuestion{
+    color: white;
+    font-size:12vw;
     background-color: white;
+    background:transparent;
+    margin-top:5%;
     width:95%;
     margin:auto;
     border-radius:3rem;
     padding:8px
   }
 }
-
 
 .Bulle-Titre{
 background-color: #fff !important;
