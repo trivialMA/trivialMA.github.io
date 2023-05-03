@@ -165,7 +165,7 @@ html, body {
 
 @media (max-width: 500px) {
   .author {
-    font-size:6vw;
+    font-size:12vw;
     /*border: 3px solid;*/
     margin-bottom:0;
     font-weight: bold;
@@ -180,7 +180,7 @@ html, body {
 
 @media (max-width: 500px) {
   #reponse {
-    font-size:5vw;
+    font-size:10vw;
     /*border: 3px solid;*/
     font-style: italic;
   }

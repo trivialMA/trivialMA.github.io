@@ -291,12 +291,12 @@ function afficherReponse(){
 	    // On change aussi ce qui est écrit sur le bouton
         document.getElementById('bouton-rep').textContent = "Masquer la réponse";
     // Si la reponse n'est pas vide (affichée), on la cache
-    else {
+    } else {
         document.getElementById('reponse').textContent = null;
 	    // On remet le bon texte sur le bouton
 	    document.getElementById('bouton-rep').textContent = "Afficher la réponse";
-        }
     }
+}
 
 function getRandomInt(max) {
   max = Math.floor(max);
