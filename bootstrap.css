@@ -110,8 +110,6 @@ html, body {
 @media (max-width: 500px) {
   .question {
     font-size:5vw;
-    /*border: 3px solid;*/
-    /*font-style: italic;*/
     overflow:auto; max-height: 50vh;
   }
 }
@@ -167,17 +165,7 @@ html, body {
 }
 
 #reponse {
-  font-size:2vw;
-  /*border: 3px solid;*/
   font-style: italic;
-}
-
-@media (max-width: 500px) {
-  #reponse {
-    font-size:7vw;
-    /*border: 3px solid;*/
-    font-style: italic;
-  }
 }
 
 .image-upload>input {
