@@ -101,10 +101,29 @@ html, body {
   margin:auto;
 }
 
+@media (max-width: 500px) {
+  .title_q {
+    color: white;
+    font-size:8vw;
+    width: 100%;
+    margin-top:5%;
+    background:transparent;
+    margin:auto;
+  }
+}
+
 .question {
   font-size:2vw;
   color:white;
   /*border: 3px solid;*/
+}
+
+@media (max-width: 500px) {
+  .question {
+    font-size:5vw;
+    /*border: 3px solid;*/
+    font-style: italic;
+  }
 }
 
 .font{
@@ -142,10 +161,27 @@ html, body {
   font-weight: bold;
 }
 
+@media (max-width: 500px) {
+  .author {
+    font-size:6vw;
+    /*border: 3px solid;*/
+    margin-bottom:0;
+    font-weight: bold;
+  }
+}
+
 #reponse {
   font-size:2vw;
   /*border: 3px solid;*/
   font-style: italic;
+}
+
+@media (max-width: 500px) {
+  #reponse {
+    font-size:5vw;
+    /*border: 3px solid;*/
+    font-style: italic;
+  }
 }
 
 .image-upload>input {
