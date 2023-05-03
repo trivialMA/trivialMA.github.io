@@ -158,6 +158,16 @@ html, body {
   /*font-family:"DM Serif Display";*/
 }
 
+@media (max-width: 500px) {
+  .resp_bouton {
+    font-size: 5vw;
+    width: 40vw;
+    height: 20vw;
+    margin: 1vw;
+    border-radius:10rem;
+  }
+}
+
 .basic_btn {
   color: #fff;
   background-color: transparent;
