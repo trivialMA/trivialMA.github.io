@@ -73,7 +73,7 @@ html, body {
 
 @media (max-width: 500px) {
   .logo{
-    width: 40vw;
+    width: 35vw;
     margin: auto;
   }
 }
