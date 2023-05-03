@@ -73,7 +73,7 @@ html, body {
 
 @media (max-width: 500px) {
   .logo{
-    width: 35vw;
+    width: 40vw;
     margin: auto;
   }
 }
@@ -113,6 +113,12 @@ html, body {
     /*border: 3px solid;*/
     /*font-style: italic;*/
     overflow:auto; max-height: 50vh;
+  }
+}
+
+@media(max-width: 500px){
+  #Question{
+    margin-top:5%;
   }
 }
 
@@ -263,7 +269,8 @@ html, body {
     font-size:11vw;
     background-color: white;
     background:transparent;
-    margin-top:5%;
+    margin-top:100px;
+    padding-top: 100px;
     width:95%;
     margin:auto;
     border-radius:3rem;
