@@ -205,7 +205,8 @@ html, body {
     height: 20vw;
     margin: 1vw;
     border-radius:10rem;
-    overflow: break-word;
+    overflow-wrap: break-word;
+    /*overflow-wrap: anywhere;*/
   }
 }
 
@@ -252,7 +253,7 @@ html, body {
 @media (max-width: 500px) {
   #TitreQuestion{
     color: white;
-    font-size:12vw;
+    font-size:11vw;
     background-color: white;
     background:transparent;
     margin-top:5%;
