@@ -115,7 +115,7 @@ html, body {
 }
 
 @media(max-width: 500px){
-  #Question{
+  #Question_div{
     margin-top:3%;
   }
 }

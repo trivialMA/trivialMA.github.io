@@ -233,7 +233,7 @@ function afficherCarte(theme,q1, name, nb_photos){
         // Hide Selection div
         document.getElementById('Selection').hidden = true;
         // Show Question div
-        document.getElementById('Question').hidden = false;
+        document.getElementById('Question_div').hidden = false;
 
         // Print content
         document.getElementById('TitreQuestion').classList.add("Bulle-Question-" + theme);
@@ -272,7 +272,7 @@ function Hide_Loading(){
 
 function choixThème(){
     // Hide Question div
-    document.getElementById('Question').hidden = true;
+    document.getElementById('Question_div').hidden = true;
     // Show Selection div
     document.getElementById('Selection').hidden = false;
 
