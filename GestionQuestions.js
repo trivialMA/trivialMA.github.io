@@ -236,7 +236,6 @@ function afficherCarte(theme,q1, name, nb_photos){
         document.getElementById('Question').hidden = false;
 
         // Print content
-        document.getElementById('TitreQuestion').textContent = "Question " + theme;
         document.getElementById('TitreQuestion').classList.add("Bulle-Question-" + theme);
         document.getElementById('question').textContent = q1;
         document.getElementById('name').textContent = name
@@ -245,6 +244,13 @@ function afficherCarte(theme,q1, name, nb_photos){
         document.body.classList.add("backgroundbody_question");
         document.body.classList.remove("backgroundbody_selection");
         document.body.style.backgroundImage = "url(images/"+theme+"/"+getRandomInt(nb_photos)+".jpg)";
+
+        if (window.innerWidth < 500) { // small screen
+            document.getElementById('bouton-newQ').textContent = "Nouvelle Question";
+            document.getElementById('TitreQuestion').textContent = theme;
+        } else {
+            document.getElementById('TitreQuestion').textContent = "Question " + theme;
+        }
 }
 
 function removeBackGroundColor(){
@@ -283,8 +289,7 @@ function afficherReponse(){
     if (document.getElementById('reponse').textContent[0] == null){
         document.getElementById('reponse').textContent = reponse;
 	    // On change aussi ce qui est écrit sur le bouton
-	    document.getElementById('bouton-rep').textContent = "Masquer la réponse";
-        }      
+        document.getElementById('bouton-rep').textContent = "Masquer la réponse";
     // Si la reponse n'est pas vide (affichée), on la cache
     else {
         document.getElementById('reponse').textContent = null;

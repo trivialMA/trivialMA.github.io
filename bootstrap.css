@@ -104,7 +104,7 @@ html, body {
 @media (max-width: 500px) {
   .title_q {
     color: white;
-    font-size:8vw;
+    font-size:20vw;
     width: 100%;
     margin-top:5%;
     background:transparent;
@@ -115,14 +115,16 @@ html, body {
 .question {
   font-size:2vw;
   color:white;
+  overflow:auto; max-height: 25vw;
   /*border: 3px solid;*/
 }
 
 @media (max-width: 500px) {
   .question {
-    font-size:5vw;
+    font-size:10vw;
     /*border: 3px solid;*/
     font-style: italic;
+    overflow:auto; max-height: 50vh;
   }
 }
 
