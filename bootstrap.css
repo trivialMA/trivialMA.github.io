@@ -186,6 +186,7 @@ html, body {
     height: 20vw;
     margin: 1vw;
     border-radius:10rem;
+    overflow: break-word;
   }
 }
 
