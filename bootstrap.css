@@ -109,7 +109,7 @@ html, body {
 
 @media (max-width: 500px) {
   .question {
-    font-size:7vw;
+    font-size:5vw;
     /*border: 3px solid;*/
     /*font-style: italic;*/
     overflow:auto; max-height: 50vh;
@@ -153,7 +153,7 @@ html, body {
 
 @media (max-width: 500px) {
   .author {
-    font-size:9vw;
+    font-size:7vw;
     /*border: 3px solid;*/
     margin-bottom:0;
     font-weight: bold;
