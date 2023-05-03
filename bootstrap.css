@@ -61,13 +61,20 @@ html, body {
   /*border: 2px solid;*/
 }
 
+@media(max-width: 500px){
+  header{
+    text-align: center;
+  }
+}
+
 .logo{
   width: 13vw;
 }
 
 @media (max-width: 500px) {
   .logo{
-    width: 30vw;
+    width: 40vw;
+    margin: auto;
   }
 }
 
