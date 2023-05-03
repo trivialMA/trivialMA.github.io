@@ -62,12 +62,12 @@ html, body {
 }
 
 .logo{
-  width: 15vw;
+  width: 13vw;
 }
 
 @media (max-width: 500px) {
   .logo{
-    width: 25vw;
+    width: 30vw;
   }
 }
 
