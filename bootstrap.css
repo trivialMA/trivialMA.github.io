@@ -116,7 +116,7 @@ html, body {
 
 @media(max-width: 500px){
   #Question{
-    margin-top:5%;
+    margin-top:3%;
   }
 }
 
@@ -140,13 +140,6 @@ html, body {
 .Start {font-family:"Press Start 2P";}
 .R1 {font-family:"Rampart One";}
 .Chewy {font-family:"Chewy";}
-
-#question {
-  margin-top:0;
-  margin-bottom:0;
-  /*border: 3px solid;*/
-  font-weight: lighter;
-}
 
 .author {
   font-size:3vw;
